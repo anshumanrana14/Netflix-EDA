@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix EDA Project</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #141414; /* Netflix dark theme */
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      background-color: #e50914;
+      padding: 25px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 40px auto 10px;
+      padding: 0 20px;
+      font-size: 1.1rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      padding: 40px;
+    }
+
+    .card {
+      background-color: #1f1f1f;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 25px rgba(229, 9, 20, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    
+    .card:nth-child(2) img {
+  height: 650px; 
+  object-fit: contain;
+}
+
+    .caption {
+      padding: 15px;
+      background-color: #1f1f1f;
+      font-size: 1rem;
+      color: #f5f5f5;
+      border-top: 1px solid #333;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #bbb;
+      border-top: 1px solid #333;
+    }
+
+   
+    .card {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Netflix EDA Project</h1>
+  </header>
+
+  <div class="intro">
+    <p>
+      This Exploratory Data Analysis (EDA) explores Netflix’s dataset to uncover
+      patterns and insights about movies, TV shows, directors, ratings, and global content
+      distribution. The following visualizations highlight key findings from the analysis.
+    </p>
+  </div>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="graph1.jpg" alt="Count of Movies vs TV Shows">
+      <div class="caption">Count of Movies vs TV Shows on Netflix</div>
+    </div>
+
+    <div class="card">
+      <img src="graph6.png" alt="Directors vs Movie Count">
+      <div class="caption">Name of Directors vs Count (How many movies they have directed)</div>
+    </div>
+
+    <div class="card">
+      <img src="graph3.jpg" alt="Number of Titles vs Rating">
+      <div class="caption">Number of Titles vs Rating</div>
+    </div>
+
+    <div class="card">
+      <img src="graph4.jpg" alt="Movies and TV Shows by Country">
+      <div class="caption">Movies and TV Shows by Country vs Count</div>
+    </div>
+
+    <div class="card">
+      <img src="graph5.jpg" alt="Content on Netflix">
+      <div class="caption">Content on Netflix</div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 | Created by Anshuman Rana
+  </footer>
+</body>
+</html>
